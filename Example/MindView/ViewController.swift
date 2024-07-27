@@ -33,7 +33,6 @@ class ViewController: UIViewController {
         
         mindView.frame = view.bounds
         view.addSubview(mindView)
-        
         let node = MindNode(id: 1, nodeClass: NodeView.self, model: "中心主题", subNodes: [
             MindNode(id: 2, nodeClass: NodeView.self, model: "会议纪要", subNodes: [
                 MindNode(id: 3, nodeClass: NodeView.self, model: "纪要1", subNodes: []),
