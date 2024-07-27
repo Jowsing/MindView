@@ -22,16 +22,13 @@ TODO: Add long description of the pod here.
                        DESC
 
   s.homepage         = 'https://github.com/jowsing/MindView'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  s.screenshots     = 'https://github.com/Jowsing/MindView/blob/main/images/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202024-07-27%20at%2013.30.49.png', 'https://github.com/Jowsing/MindView/blob/main/images/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202024-07-27%20at%2018.11.29.png'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'jowsing' => 'jowsing169@gmail.com' }
   s.source           = { :git => 'https://github.com/jowsing/MindView.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '11.0'
 
   s.source_files = 'MindView/Sources/**/*'
 
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
