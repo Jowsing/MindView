@@ -7,7 +7,8 @@
 ## Example
 
 ![Screenshot](https://github.com/Jowsing/MindView/blob/main/images/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202024-07-27%20at%2013.30.49.png)
-! [Screenshot](https://github.com/Jowsing/MindView/blob/main/images/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202024-07-27%20at%2018.11.29.png)
+
+![Screenshot](https://github.com/Jowsing/MindView/blob/main/images/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202024-07-27%20at%2018.11.29.png)
 
 ### Coding
 
