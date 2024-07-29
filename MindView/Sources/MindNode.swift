@@ -9,13 +9,13 @@ import Foundation
 
 public struct MindNode {
     
-    public let id: Int
+    public var id: Int
     
-    public let nodeClass: any MindNodable.Type
+    public var nodeClass: any MindNodable.Type
     
-    public let model: Any?
+    public var model: Any?
     
-    public let subNodes: [MindNode]
+    public var subNodes: [MindNode]
     
     public init(id: Int, nodeClass: any MindNodable.Type, model: Any?, subNodes: [MindNode]) {
         self.id = id
