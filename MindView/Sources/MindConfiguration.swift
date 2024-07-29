@@ -22,8 +22,10 @@ public struct MindConfiguration {
     let maximumZoomScale: CGFloat
     
     let curveLinesColor: UIColor
+    /// 为了展示完整而缩小
+    let zoomOutToShowComplete: Bool
     
-    public init(contentInserts: UIEdgeInsets = .zero, nodeHeight: CGFloat = 40, nodeSpacing: CGFloat = 0, sectionSpacing: CGFloat = 60, minimumZoomScale: CGFloat = 0.5, maximumZoomScale: CGFloat = 3, curveLinesColor: UIColor = UIColor.systemBlue) {
+    public init(contentInserts: UIEdgeInsets = .zero, nodeHeight: CGFloat = 40, nodeSpacing: CGFloat = 0, sectionSpacing: CGFloat = 60, minimumZoomScale: CGFloat = 0.5, maximumZoomScale: CGFloat = 3, curveLinesColor: UIColor = UIColor.systemBlue, zoomOutToShowComplete: Bool = false) {
         self.contentInserts = contentInserts
         self.nodeHeight = nodeHeight
         self.nodeSpacing = nodeSpacing
@@ -31,5 +33,6 @@ public struct MindConfiguration {
         self.minimumZoomScale = minimumZoomScale
         self.maximumZoomScale = maximumZoomScale
         self.curveLinesColor = curveLinesColor
+        self.zoomOutToShowComplete = zoomOutToShowComplete
     }
 }

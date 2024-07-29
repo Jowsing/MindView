@@ -25,7 +25,7 @@ class NodeView: UILabel, MindNodable {
 
 class ViewController: UIViewController {
     
-    let mindView = MindView(configuration: .init(contentInserts: .init(top: 0, left: 30, bottom: 0, right: 30), nodeSpacing: 10))
+    let mindView = MindView(configuration: .init(contentInserts: .init(top: 0, left: 30, bottom: 0, right: 30), nodeSpacing: 10, zoomOutToShowComplete: true))
 
     override func viewDidLoad() {
         super.viewDidLoad()

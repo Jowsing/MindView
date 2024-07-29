@@ -144,11 +144,25 @@ public class MindView: UIScrollView {
     }
     
     private func updateContentSize() {
+        guard bounds != .zero else {
+            return
+        }
         let contentSize = CGSize(width: max(bounds.width, contentView.bounds.width),
                                  height: max(bounds.height, contentView.bounds.height))
         if self.contentSize != contentSize {
             self.contentSize = contentSize
-            contentView.center = zoomToCenter()
+            if configuration.zoomOutToShowComplete {
+                let scaleX = bounds.width / contentView.bounds.width
+                let scaleY = bounds.height / contentView.bounds.height
+                let scale = min(scaleX, scaleY)
+                if scale < 1 {
+                    setZoomScale(scale, animated: false)
+                } else {
+                    contentView.center = zoomToCenter()
+                }
+            } else {
+                contentView.center = zoomToCenter()
+            }
         }
     }
 }
