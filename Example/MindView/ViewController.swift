@@ -25,7 +25,7 @@ class NodeView: UILabel, MindNodable {
 
 class ViewController: UIViewController {
     
-    let mindView = MindView(configuration: .init(contentInserts: .init(top: 0, left: 30, bottom: 0, right: 30)))
+    let mindView = MindView(configuration: .init(contentInserts: .init(top: 0, left: 30, bottom: 0, right: 30), nodeSpacing: 10))
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,7 +35,12 @@ class ViewController: UIViewController {
         view.addSubview(mindView)
         let node = MindNode(id: 1, nodeClass: NodeView.self, model: "中心主题", subNodes: [
             MindNode(id: 2, nodeClass: NodeView.self, model: "会议纪要", subNodes: [
-                MindNode(id: 3, nodeClass: NodeView.self, model: "纪要1", subNodes: []),
+                MindNode(id: 3, nodeClass: NodeView.self, model: "纪要1", subNodes: [
+                    MindNode(id: 103, nodeClass: NodeView.self, model: "纪要1", subNodes: []),
+                    MindNode(id: 104, nodeClass: NodeView.self, model: "会纪要2", subNodes: []),
+                    MindNode(id: 105, nodeClass: NodeView.self, model: "会议纪dddd要3", subNodes: []),
+                    MindNode(id: 106, nodeClass: NodeView.self, model: "会议", subNodes: []),
+                ]),
                 MindNode(id: 4, nodeClass: NodeView.self, model: "会纪要2", subNodes: []),
                 MindNode(id: 5, nodeClass: NodeView.self, model: "会议纪dddd要3", subNodes: []),
                 MindNode(id: 6, nodeClass: NodeView.self, model: "会议", subNodes: []),
@@ -45,7 +50,12 @@ class ViewController: UIViewController {
             ]),
             MindNode(id: 7, nodeClass: NodeView.self, model: "会议纪要", subNodes: [
                 MindNode(id: 8, nodeClass: NodeView.self, model: "纪要1", subNodes: []),
-                MindNode(id: 9, nodeClass: NodeView.self, model: "会纪要2", subNodes: []),
+                MindNode(id: 9, nodeClass: NodeView.self, model: "会纪要2", subNodes: [
+                    MindNode(id: 113, nodeClass: NodeView.self, model: "纪要1", subNodes: []),
+                    MindNode(id: 114, nodeClass: NodeView.self, model: "会纪要2", subNodes: []),
+                    MindNode(id: 115, nodeClass: NodeView.self, model: "会议纪dddd要3", subNodes: []),
+                    MindNode(id: 116, nodeClass: NodeView.self, model: "会议", subNodes: []),
+                ]),
                 MindNode(id: 10, nodeClass: NodeView.self, model: "会议纪dddd要3", subNodes: []),
             ]),
             MindNode(id: 11, nodeClass: NodeView.self, model: "会议纪要", subNodes: [
@@ -54,7 +64,12 @@ class ViewController: UIViewController {
             ]),
             MindNode(id: 14, nodeClass: NodeView.self, model: "会议纪要", subNodes: [
                 MindNode(id: 15, nodeClass: NodeView.self, model: "纪要1", subNodes: []),
-                MindNode(id: 16, nodeClass: NodeView.self, model: "会纪要2", subNodes: []),
+                MindNode(id: 16, nodeClass: NodeView.self, model: "会纪要2", subNodes: [
+                    MindNode(id: 123, nodeClass: NodeView.self, model: "纪要1", subNodes: []),
+                    MindNode(id: 124, nodeClass: NodeView.self, model: "会纪要2", subNodes: []),
+                    MindNode(id: 125, nodeClass: NodeView.self, model: "会议纪dddd要3", subNodes: []),
+                    MindNode(id: 126, nodeClass: NodeView.self, model: "会议", subNodes: []),
+                ]),
                 MindNode(id: 17, nodeClass: NodeView.self, model: "会议纪dddd要3", subNodes: []),
             ]),
         ])

@@ -8,19 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MindView'
-  s.version          = '1.0.0'
+  s.version          = '1.0.1'
   s.summary          = 'A highly customizable nodeView of MindView.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
-
   s.homepage         = 'https://github.com/jowsing/MindView'
   s.screenshots     = 'https://github.com/Jowsing/MindView/blob/main/images/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202024-07-27%20at%2013.30.49.png', 'https://github.com/Jowsing/MindView/blob/main/images/Simulator%20Screenshot%20-%20iPhone%2015%20Pro%20-%202024-07-27%20at%2018.11.29.png'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }

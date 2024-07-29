@@ -21,6 +21,14 @@ public class MindView: UIScrollView {
     
     private var rootNode: MindNode?
     
+    private var boundsSize = CGSize.zero {
+        didSet {
+            if Int(boundsSize.width) != Int(oldValue.width) {
+                updateContentSize()
+            }
+        }
+    }
+    
     // MARK: - Property (retain)
     
     private let contentView = MindContentView()
@@ -39,7 +47,7 @@ public class MindView: UIScrollView {
     
     public override func layoutSubviews() {
         super.layoutSubviews()
-        self.updateContentSize()
+        self.boundsSize = bounds.size
     }
     
     public func setupUI() {
@@ -56,7 +64,7 @@ public class MindView: UIScrollView {
         self.addGestureRecognizer(doubleTaper)
     }
     
-    public func zoomToCenter() -> CGPoint {
+    func zoomToCenter() -> CGPoint {
         let offsetX = bounds.width > contentSize.width ? (bounds.width - contentSize.width) * 0.5 : 0
         let offsetY = bounds.height > contentSize.height ? (bounds.height - contentSize.height) * 0.5 : 0
         return CGPoint(x: contentSize.width * 0.5 + offsetX, y: contentSize.height * 0.5 + offsetY)
@@ -86,7 +94,6 @@ public class MindView: UIScrollView {
         rootNodeView.center.y = contentView.bounds.height * 0.5
         updateContentSize()
         contentView.root = node
-        contentView.center = zoomToCenter()
     }
     
     private func setupNodes(_ nodes: [MindNode], top: CGFloat, level: Int) {
@@ -119,8 +126,9 @@ public class MindView: UIScrollView {
             setupNodes(node.subNodes, top: nodeY, level: level + 1)
             
             nodeY += nodeH
-            if !node.subNodes.isEmpty {
-                nodeY += configuration.groupSpacing
+            /// 插入间隔
+            if i != nodes.count - 1 {
+                nodeY += configuration.nodeSpacing
             }
         }
         if level == 1 {
